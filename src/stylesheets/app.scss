@@ -1,20 +1,27 @@
 /**
  * Application Styles
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 .ol-map {
   width: 100%;
   height: 300px;
   border: 1px solid #E4E4E4;
-
-  font: 1em/1.5 "Open Sans",Helvetica,Arial,sans-serif;
-  color: #222;
-  font-weight: 400;
 }
+
 #issue-form .ol-map {
   width: 92%;
   margin: 1em auto;
+}
+
+.ol-popup {
+  max-width: 300px;
+  min-width: 100px;
+  min-height: 1em;
+}
+
+.ol-popup-content {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #222;
 }
 
 .ol-control button{
