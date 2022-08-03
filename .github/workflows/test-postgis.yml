@@ -66,6 +66,7 @@ jobs:
           gcc libpq-dev make patch libgeos-dev
 
       - name: Setup Node
+        working-directory: redmine/plugins/redmine_gtt
         uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -74,7 +75,6 @@ jobs:
       - name: Prepare Plugin
         working-directory: redmine/plugins/redmine_gtt
         run: |
-          echo `pwd`
           yarn
           npx webpack
 
