@@ -134,3 +134,9 @@ jobs:
           RAILS_ENV: test
         working-directory: redmine
         run: bundle exec rake redmine:plugins:migrate NAME=${{ env.PLUGIN_NAME }} VERSION=0
+
+      - name: Parallel migration check
+        env:
+          RAILS_ENV: test
+        working-directory: redmine
+        run: bundle exec rake redmine:plugins:migration & bundle exec rake redmine:plugins:migration & wait
