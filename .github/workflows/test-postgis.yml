@@ -139,4 +139,4 @@ jobs:
         env:
           RAILS_ENV: test
         working-directory: redmine
-        run: bundle exec rake redmine:plugins:migration & bundle exec rake redmine:plugins:migration & wait
+        run: bundle exec rake redmine:plugins:migrate & bundle exec rake redmine:plugins:migrate & wait
