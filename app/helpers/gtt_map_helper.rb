@@ -70,6 +70,15 @@ module GttMapHelper
             window.createGttClient(target);
             contentObserver();
           }, { once: true });
+          if (window.location.pathname.endsWith('/issues/new')) {
+            var target = document.getElementById('#{uid}');
+            if (
+              document.readyState === 'complete'
+              && !target.hasChildNodes()
+            ) {
+              window.createGttClient(target);
+            }
+          }
         }
         document.addEventListener('DOMContentLoaded', function(){
           var target = document.getElementById('#{uid}');
